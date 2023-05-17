@@ -1,3 +1,4 @@
 conf/
 logs/
 app/sql/
+app/public/wp-config.php
