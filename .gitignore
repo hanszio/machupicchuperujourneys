@@ -2,4 +2,4 @@ conf/
 logs/
 app/sql/
 app/public/wp-config.php
-app/public/wp-includes/local.sql
+app/public/local.sql
