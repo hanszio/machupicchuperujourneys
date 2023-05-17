@@ -1,0 +1,8 @@
+Para que funcione este tema es necesario instalar los siguientes plugins:
+* polylang
+* contact form 7
+* contact form 7 cfdb7
+* svg suport
+* Site Kit by Google – Analytics, Search Console, AdSense, Speed *Nuevo para SEO
+
+Este template tiene soporte para imagenes *.Webp.

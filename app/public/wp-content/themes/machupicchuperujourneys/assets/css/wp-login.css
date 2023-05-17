@@ -1,0 +1,65 @@
+body.login {
+    background-image: url(../images/wp-login-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+body.login div#login {
+    width: 320px;
+    padding: 30px 20px 10px 20px;
+    margin: auto;
+    backdrop-filter: blur(12.046699523925781px);
+    --webkit-backdrop-filter: blur(12.046699523925781px);
+    background-color: rgb(255 255 255 / 50%);
+    border-radius: 7px;
+    box-shadow: 0 0 35px 0px rgb(0 0 0 / 45%);
+}
+body.login div#login h1 {}
+body.login div#login h1 a {}
+body.login div#login form#loginform {
+    border-radius: 7px;
+}
+body.login div#login form#loginform p {}
+body.login div#login form#loginform p label {}
+body.login div#login form#loginform input {}
+body.login div#login form#loginform input#user_login {}
+body.login div#login form#loginform input#user_pass {}
+body.login div#login form#loginform p.forgetmenot {}
+body.login div#login form#loginform p.forgetmenot input#rememberme {}
+body.login div#login form#loginform p.submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+body.login div#login form#loginform p.submit input#wp-submit {
+    width: 100%;
+    text-shadow: none;
+    color: #26191c;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px;
+    height: auto;
+}
+body.login div#login p#nav {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+body.login div#login p#nav a {}
+body.login div#login p#backtoblog {
+    display: none;
+}
+body.login div#login p#backtoblog a {}
+
+#user_login,
+#user_pass,
+#wp-submit{
+    background: #eaeaf3;
+    border: none;
+    color: #333;
+    box-shadow: none;
+}

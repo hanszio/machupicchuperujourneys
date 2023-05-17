@@ -1,0 +1,1584 @@
+/*
+Theme Name: Machupicchu Peru Journeys - Travel Agency Template.
+Author: Hans Ccarita
+Description: El tema, peronalizado y enfocado a los servicios que presta la Empresa con un diseño claro. La tipografía es sencilla, clara y legible en una gran variedad de tamaños de pantalla, además de disponible en multitud de idiomas. Lo hemos diseñado pensando primero en su uso móvil, lo que implica que tu contenido ocupará el centro de la escena independientemente de cómo lleguen tus visitantes, ya sea desde un móvil inteligente, una tableta, un portátil o un ordenador de escritorio.
+Author URI: https://github.com/hanszio
+version: 1.0
+License: GNU General Public License v3 or later  
+License URI: http://www.gnu.org/licenses/gpl-3.0.html  
+Text Domain: projectzion
+Tags: wordpress theme, hans designer, web developer
+*/
+
+/* GENERALES */
+:root {
+	--background: #faf9f8;
+	--white: #fff;
+	--gray-1: #ebebeb;
+	--gray-2: #d7d7d8;
+	--gray-3: #c3c3c4;
+	--gray-4: #afafb0;
+	--gray-5: #9b9b9d;
+	--gray-6: #878789;
+	--gray-7: #737376;
+	--gray-8: #5f5f62;
+	--gray-9: #4b4b4e;
+	--gray-10: #37373b;
+	--black: #292b30;
+	--dark: #353538;
+	--green-mpj-01: #16ff03;
+	--green-mpj-02: #42db1d;
+	--yellow-mpj-01: #ffec00;
+	--yellow-mpj-02: #f2cc0f;
+	--yellow: #FFD93D;
+	--green: #6BCB77;
+	--red: #FF6B6B;
+	--blue: #4D96FF;
+	--soft-blue: #2c72d7;
+	--font-primary:
+		"Work Sans", -apple-system, Helvetica, Arial, sans-serif;
+	--font-secondary:
+		"caecilia", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	font-family: var(--font-primary);
+	background: var(--background);
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: var(--font-primary);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+main {
+	position: relative;
+}
+
+section {
+	width: 90%;
+	margin: 5rem auto;
+	/* display: inline-block; */
+}
+
+section p:not(section p:last-child),
+section ul:not(section ul:last-child) {
+	margin-bottom: 2rem;
+	box-sizing: border-box;
+}
+
+section p {
+	margin-bottom: 2rem;
+	box-sizing: border-box;
+}
+
+section p:last-child {
+	margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: var(--font-secondary);
+	font-style: normal;
+	font-weight: 600;
+	font-size: 3.2rem;
+	line-height: 4rem;
+	color: var(--dark);
+}
+
+h2 {
+	font-weight: 500;
+	font-size: 2.8rem;
+}
+
+h3 {
+	font-weight: 400;
+	font-size: 2.2rem;
+}
+
+h4 {
+	font-weight: 300;
+	font-size: 1.8rem;
+}
+
+p,
+li {
+	font-style: normal;
+	font-size: 1.6rem;
+	font-weight: 300;
+	line-height: 2.4rem;
+	color: var(--dark);
+}
+
+li {
+	list-style: disc outside;
+	margin-left: 1em;
+}
+
+p:empty {
+	display: none;
+}
+
+hr {
+	margin: 3rem 0;
+	color: var(--dark);
+}
+
+/* FIN-GENERALES */
+/* ESTILOS ESPECIALES */
+.tittle-coca {
+	position: relative;
+}
+
+.tittle-coca::before,
+.tittle-coca::after {
+	display: inline-flex;
+	content: "";
+	width: 37px;
+	height: 21px;
+	background: url("assets/images/coca.svg") no-repeat center center;
+	background-size: 37px 21px;
+	margin: 0 1rem 0 0;
+}
+
+.tittle-coca::after {
+	margin: 0 0 0 1rem;
+	transform: scaleX(-1);
+}
+
+.button-mpj {
+	color: var(--white);
+	text-decoration: none;
+	font-size: 1.4rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	padding: 1.8rem 2.4rem;
+	border: 2px solid var(--green);
+	border-radius: 3rem;
+	display: inline-block;
+}
+
+.button-mpj:hover {
+	background-color: rgba(0, 0, 0, 0.61);
+}
+
+/* FIN-ESPECIALES */
+/* HEADER */
+.header__frontpage {
+	position: relative;
+}
+
+.header__nav {
+	width: 100%;
+	position: absolute;
+	z-index: 2;
+	background: linear-gradient(0deg,
+			rgba(255, 255, 255, 0) 0%,
+			rgba(255, 255, 255, 1) 100%);
+}
+
+.header__content {
+	display: flex;
+	justify-content: center;
+	margin: 2.5rem auto 8.5rem;
+}
+
+.header__logo {
+	padding: 0;
+}
+
+.header__logo img {
+	width: 25rem;
+	height: auto;
+}
+
+.header__banner {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.header__banner canvas {
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+}
+
+.header__banner nav a {
+	color: var(--white);
+	text-decoration: none;
+	/*margin-right: 14px;*/
+	position: absolute;
+	top: 50vh;
+	z-index: 1;
+}
+
+.header__banner nav a:hover,
+.header__banner nav a:focus {
+	color: var(--white);
+	outline: none;
+}
+
+.header__banner nav span {
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	background-color: var(--white);
+	display: block;
+	margin-top: 7px;
+	-moz-transition: width 0.3s ease;
+	-webkit-transition: width 0.3s ease;
+	transition: width 0.3s ease;
+}
+
+.header__banner nav a:hover span {
+	width: 0;
+}
+
+.header__banner nav a.next {
+	right: 5vw;
+}
+
+.header__banner nav a.prev {
+	left: 5vw;
+}
+
+/* FIN HEADER */
+/* MENU */
+#menu__burger {
+	display: none;
+}
+
+.header__menu input+label {
+	background: var(--green);
+	border: 13px solid var(--green);
+	border-radius: 50%;
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	height: 20px;
+	width: 20px;
+	z-index: 5;
+	box-sizing: initial;
+}
+
+.header__menu input+label span {
+	background: var(--black);
+	position: absolute;
+	width: 100%;
+	height: 3px;
+	top: 50%;
+	margin-top: -1px;
+	left: 0;
+	display: block;
+	transition: 0.5s;
+}
+
+.header__menu input+label span:first-child {
+	top: 4px;
+}
+
+.header__menu input+label span:last-child {
+	top: 16px;
+}
+
+.header__menu input+label span:nth-of-type(1) {
+	width: 50%;
+}
+
+.header__menu input+label span:nth-of-type(2) {
+	width: 100%;
+}
+
+.header__menu input+label span:nth-of-type(3) {
+	width: 75%;
+}
+
+.header__menu label:hover {
+	cursor: pointer;
+}
+
+.header__menu input:checked+label span {
+	opacity: 0;
+	top: 50%;
+	width: 100%;
+}
+
+.header__menu input:checked+label span:first-child {
+	opacity: 1;
+	transform: rotate(405deg);
+}
+
+.header__menu input:checked+label span:last-child {
+	opacity: 1;
+	transform: rotate(-405deg);
+}
+
+.header__menu input~nav {
+	background: var(--black);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 0%;
+	height: 0%;
+	z-index: 4;
+	transition: 0.5s;
+	transition-delay: 0.5s;
+	overflow: hidden;
+	box-shadow: none;
+	display: none;
+}
+
+.header__menu input~nav ul {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
+	padding: 3rem 0;
+	box-sizing: border-box;
+	align-items: center;
+	margin: 0 auto;
+}
+
+.header__menu input~nav ul>li {
+	opacity: 0;
+	transition: 0.5s;
+	transition-delay: 0s;
+}
+
+.header__menu input~nav ul>li>a {
+	font-family: var(--font-primary);
+	font-size: 2.2rem;
+	text-decoration: none;
+	text-align: center;
+	color: #ffffff;
+	font-weight: 400;
+	display: block;
+	padding: 3.3rem 3rem;
+	width: 100vw;
+	text-transform: uppercase;
+}
+
+.header__menu input:checked~nav {
+	display: inherit;
+	background: var(--black);
+	height: 100vh;
+	width: 100vw;
+}
+
+.header__menu input:checked~nav ul>li {
+	opacity: 1;
+	transition-delay: 0.5s;
+	display: block;
+	margin: 0;
+}
+
+.header__menu input:checked~nav ul>li.current-menu-item a {
+	background: linear-gradient(90deg, var(--dark) 0%, var(--black) 60%);
+}
+
+.header__menu input:checked~nav ul>li:not(:last-child) {
+	border-bottom: 1px solid;
+	border-image: linear-gradient(to right,
+			var(--black),
+			var(--green),
+			var(--black)) 1;
+}
+
+.header__menu input~nav .sub-menu {
+	display: none;
+	padding: 0;
+	background: var(--dark);
+	height: auto;
+}
+
+/* --- configuracion de sub menu ---*/
+
+.menu__nav ul li:hover .menu-item-has-children {
+	display: block;
+}
+
+.menu__nav ul li .menu-item-has-children {
+	display: none;
+	background: #011826;
+	position: absolute;
+	width: 150%;
+	z-index: 1000;
+}
+
+.menu__nav ul li .menu-item-has-children li {
+	display: block;
+	overflow: hidden;
+	border-bottom: 1px solid rgba(255, 255, 255, .5);
+}
+
+.menu__nav ul li .menu-item-has-children li a {
+	display: block;
+}
+
+.menu__nav ul li .menu-item-has-children li a span {
+	float: right;
+	position: relative;
+	top: 3px;
+	margin-right: 0;
+	margin-left: 10px;
+}
+
+.menu__nav ul li:hover .menu-item-has-children {
+	display: none;
+}
+
+.menu__nav ul li .menu-item-has-children {
+	width: 100%;
+	position: relative;
+}
+
+.menu__nav ul li .menu-item-has-children li a {
+	margin-left: 20px;
+}
+
+/* FIN-MENU */
+/* FRONTPAGE */
+.frontpage {
+	text-align: center;
+}
+
+.frontpage__welcome {
+	margin-bottom: 10rem;
+}
+
+.frontpage__welcome h1 {
+	text-align: center;
+	margin-bottom: 4rem;
+}
+
+.frontpage__travelUs {
+	gap: 5rem;
+	padding-bottom: 5rem;
+	margin-bottom: 5rem;
+	position: relative;
+}
+
+.frontpage__travelUs:after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 25%;
+	width: 50%;
+	border-bottom: 4px solid var(--gray-2);
+}
+
+.frontpage__welcome p {
+	font-size: 2rem;
+	line-height: 2.8rem;
+}
+
+.frontpage__travelUs strong {
+	text-transform: uppercase;
+	font-size: 2.2rem;
+}
+
+.frontpage__travelUs .wp-block-image {
+	margin-bottom: 1.2rem;
+}
+
+.frontpage__packages h2 {
+	text-align: center;
+	margin-bottom: 3rem;
+}
+
+.packages .card-1 {
+	background-image: url("assets/images/packages/packages-01.webp");
+}
+
+.packages .card-2 {
+	background-image: url("assets/images/packages/packages-02.webp");
+}
+
+.packages .card-3 {
+	background-image: url("assets/images/packages/packages-03.webp");
+}
+
+.packages .card-4 {
+	background-image: url("assets/images/packages/packages-04.webp");
+}
+
+.packages .packages__card {
+	width: 100%;
+	height: 45rem;
+	background-size: cover;
+	overflow: hidden;
+	cursor: pointer;
+	position: relative;
+	/* padding: 1rem; */
+	margin-bottom: 3rem;
+}
+
+.packages .packages__card h3 {
+	color: var(--white);
+	text-align: center;
+	font-size: 2.5rem;
+	position: relative;
+	padding-bottom: 1rem;
+	margin-bottom: 2rem;
+}
+
+.packages .packages__card h3:after {
+	content: "";
+	position: absolute;
+	width: 50%;
+	height: 3px;
+	background: var(--white);
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.packages .packages__card p,
+.packages .packages__card a {
+	opacity: 0;
+	transition: opacity 0.3s ease-out;
+}
+
+.packages .packages__card p {
+	color: var(--white);
+	font-weight: 300;
+	text-align: center;
+}
+
+.packages .packages__card a {
+	border-color: var(--yellow);
+}
+
+.packages .packages__card a i {
+	margin-left: 1rem;
+}
+
+.packages__card:hover h3,
+.packages__card:focus h3 {
+	transition: inset 0.3s ease-out;
+}
+
+.packages__card:hover p,
+.packages__card:hover a,
+.packages__card:focus p,
+.packages__card:focus a {
+	opacity: 1;
+	transition: opacity 0.5s 0.1s ease-in;
+}
+
+.packages__card:hover .card-content {
+	background-color: rgba(0, 0, 0, 0.61);
+	-webkit-backdrop-filter: blur(5px) opacity(1);
+	backdrop-filter: blur(5px) opacity(1);
+	transition: all 0.4s ease-in;
+	bottom: 0;
+	top: 0;
+}
+
+.packages__card .card-content {
+	background-color: rgb(0 0 0 / 0%);
+	transition: all 0.4s ease-out;
+	-webkit-backdrop-filter: blur(5px) opacity(0);
+	backdrop-filter: blur(5px) opacity(0);
+	padding: 2rem;
+	padding-top: 5rem;
+	text-align: center;
+	height: 97%;
+	width: 97%;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -31rem;
+	margin: auto;
+}
+
+.frontpage__personalized {
+	width: 100%;
+	background: url(assets/images/personalized-adventure-background.webp) no-repeat center center;
+	background-size: cover;
+}
+
+.personalized__box {
+	width: 90%;
+	padding: 5rem 0;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	gap: 5rem;
+}
+
+.personalized__box-content {
+	text-align: center;
+}
+
+.personalized__box-content h2,
+.personalized__box-content p {
+	color: var(--white);
+}
+
+.personalized__box-content h2 {
+	margin-bottom: 2rem;
+}
+
+.personalized__box-content p {
+	margin-bottom: 4rem;
+}
+
+.about__box {
+	display: flex;
+	flex-direction: column;
+	gap: 5rem;
+}
+
+.about__box-content img {
+	margin-bottom: 3rem;
+}
+
+.about__box-content p {
+	margin-bottom: 4rem;
+}
+
+.about__box-content a {
+	color: var(--dark);
+}
+
+.frontpage__why-us h2 {
+	margin-bottom: 7rem;
+}
+
+.why-us {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 5rem;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.frontpage__why-us {
+	width: 100%;
+	background: url(assets/images/why-us-background.webp) no-repeat center center;
+	background-size: cover;
+}
+
+.why-us__box {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.frontpage__testimonials {
+	width: 100%;
+	min-height: 30rem;
+	background: url(assets/images/testimonials-background.webp) no-repeat top center;
+	background-size: cover;
+	margin-bottom: 0;
+}
+
+.testimonials__box {
+	width: 90%;
+	margin: 0 auto;
+}
+
+/* FIN-FRONTPAGE */
+/* FOOTER */
+.footer {
+	background: var(--black);
+	padding: 5rem 0;
+	text-align: center;
+}
+
+.footer h2 {
+	color: var(--yellow);
+}
+
+.footer__widgets {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 5rem;
+	margin: 0 auto;
+}
+
+.footer__widgets p,
+.footer__widgets a,
+.footer__widgets li {
+	text-align: left;
+	text-decoration: none;
+	color: var(--white);
+	line-height: 3rem;
+	margin: 0;
+	list-style-position: inside;
+}
+
+.footer__widgets .fa-ico {
+	position: relative;
+	padding-left: 2.8rem;
+}
+
+.footer__widgets .fa-ico::before {
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: auto;
+	margin: auto;
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	color: var(--yellow);
+	text-align: center;
+	width: 18px;
+}
+
+.map-icon::before {
+	font-family: "Font Awesome 6 Free";
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	font-weight: 900;
+	content: "\f279";
+}
+
+.phone-icon::before {
+	font-family: "Font Awesome 6 Free";
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	font-weight: 900;
+	content: "\f095";
+}
+
+.cellphone-icon::before {
+	font-family: "Font Awesome 6 Free";
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	font-weight: 900;
+	content: "\f3ce";
+}
+
+.mail-icon::before {
+	font-family: "Font Awesome 6 Free";
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	font-weight: 900;
+	content: "\f0e0";
+}
+
+.footer__widgets figure {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0;
+}
+
+.footer__widgets figure+figure {
+	margin-left: 1.5rem;
+}
+
+.footer__copyright {
+	background: var(--black);
+	padding: 3rem 0;
+	border-top: solid 2px var(--gray-9);
+}
+
+.copyright__box {
+	margin: 0 auto;
+}
+
+.copyright__box {
+	display: flex;
+	flex-wrap: wrap;
+	background: var(--color-negro);
+	justify-content: center;
+	gap: 2rem;
+}
+
+.copyright__box .credits img {
+	height: 24px;
+	padding: 0 5px;
+}
+
+.copy p {
+	text-align: center;
+	color: var(--gray-4);
+	font-size: 1.4rem;
+}
+
+.credits a {
+	font-weight: 300;
+	font-size: 10px;
+	line-height: 27px;
+	background: linear-gradient(to right, #bf1e63, #fc950f, #0b7ef0);
+	background-size: 200% 200%;
+	animation: rainbow 2s ease-in-out infinite;
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: #ffffff00;
+	transition: color 0.2s ease-in-out;
+	text-rendering: optimizeLegibility;
+	display: inline-flex;
+}
+
+.credits a:hover {
+	color: rgb(255 255 255);
+}
+
+@keyframes rainbow {
+	0% {
+		background-position: left;
+	}
+
+	50% {
+		background-position: right;
+	}
+
+	100% {
+		background-position: left;
+	}
+}
+
+/* FIN-FOOTER */
+/* PAGINAS-INTERNAS */
+.header__innerpages .header__nav {
+	position: unset;
+	background: var(--gray-1);
+	display: flex;
+}
+
+.header__innerpages .header__widgets .widget_polylang a {
+	display: flex;
+}
+
+.header__innerpages .header__content {
+	margin: 2.5rem auto;
+}
+
+.title__category {
+	margin-bottom: 2rem;
+}
+
+
+/* FIN-PAGINAS-INTERNAS */
+/* ITINERARIOS */
+.itinerary--content {
+	width: 100%;
+}
+
+.itinerarios__galeria {
+	position: relative;
+}
+
+.slider__slide {
+	width: 100%;
+	height: 50rem;
+}
+
+.slider__slide img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.itinerario-titulo {
+	width: 100%;
+	padding: 1.5rem 0 1rem;
+	position: absolute;
+	z-index: 1;
+	bottom: 0;
+	background: #0000007a;
+	/* Note: currently only Safari supports backdrop-filter */
+	backdrop-filter: blur(3px);
+	--webkit-backdrop-filter:
+		blur(3px);
+	background-color: rgb(0 0 0 / 50%);
+}
+
+.itinerario-titulo h1 {
+	display: block;
+	width: 90%;
+	margin: 0 auto;
+	color: var(--white);
+}
+
+.itinerario-titulo h1 .secondary_title {
+	display: inline-block;
+}
+
+.itinerary--content h2,
+.page--content h2 {
+	font: 500 2rem/2.4rem var(--font-primary);
+	text-transform: uppercase;
+	padding-bottom: 1rem;
+}
+
+.itinerary--content h3 {
+	font: 700 1.7rem var(--font-primary);
+	color: var(--red);
+}
+
+.itinerary--content>p,
+.itinerary--content>h2,
+.itinerary--content>h3,
+.itinerary--content>h4,
+.itinerary--content>ul {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.itinerary--content p,
+.page--content p {
+	text-align: justify;
+}
+
+.itinerary--content .responsive-tabs .responsive-tabs__heading {
+	background: var(--dark);
+	color: var(--white);
+	text-transform: uppercase;
+	font: 500 1.8rem/1.9rem var(--font-secondary);
+	text-align: center;
+	padding: 1.8rem 1.5rem 1.5rem;
+	border: none;
+}
+
+.itinerary--content .responsive-tabs .responsive-tabs__heading--active,
+.itinerary--content .responsive-tabs .responsive-tabs__heading--active:hover {
+	background: var(--blue);
+}
+
+.itinerary--content .responsive-tabs .responsive-tabs__panel {
+	padding-bottom: 30px;
+}
+
+.itinerary--content .responsive-tabs .responsive-tabs__heading:after {
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid var(--white);
+	content: "";
+	display: block;
+	position: absolute;
+	right: 1.2rem;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.itinerary--content .responsive-tabs .responsive-tabs__heading--active:after,
+.itinerary--content .responsive-tabs .responsive-tabs__heading--active:hover:after {
+	border-top: 0;
+	top: 50%;
+}
+
+.itinerary--content .responsive-tabs .responsive-tabs__heading:hover {
+	border: none;
+}
+
+.itinerarios__form {
+	background: var(--yellow);
+	border-radius: .5rem .5rem 0 0;
+	padding: 1.8rem 1.5rem;
+}
+
+
+.itinerarios__form h4 {
+	font: 700 2.4rem/2.8rem var(--font-primary);
+	text-align: center;
+	text-transform: uppercase;
+	color: var(--dark);
+	/* padding: 1.8rem; */
+	border-top: 1px solid var(--soft);
+	border-bottom: 1px solid var(--soft);
+}
+
+.itinerarios__form h4 span {
+	display: inline-block;
+}
+
+.itinerarios__form strong {
+	font: 600 2.4rem var(--font-primary);
+	color: var(--dark);
+	text-transform: uppercase;
+	text-align: center;
+	display: block;
+}
+
+/* FIN-ITINERARIOS */
+/* SIDEBAR */
+.general_sidebar {
+	width: 90%;
+	margin: 0 auto 2rem;
+	filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.14));
+}
+
+.asidePagina {
+	background: var(--gray-1);
+	border-radius: 1rem;
+	padding: 3rem;
+	height: fit-content;
+}
+
+.linea-debajo::after {
+	position: absolute;
+	content: "";
+	width: 40%;
+	left: 30%;
+	bottom: 0;
+	border-bottom: 2px solid var(--green);
+}
+
+.asidePagina p.linea-debajo {
+	position: relative;
+	padding: 0 1rem 1rem;
+	font-weight: 400;
+	font-size: 1.5rem;
+	line-height: 2.2rem;
+	margin-bottom: 1.5rem;
+	text-align: center;
+}
+
+.asidePagina h2 {
+	text-align: center;
+	padding-bottom: 7px;
+	font-size: 2.7rem;
+	font-weight: 700;
+}
+
+.asidePagina p.texto-side {
+	font-weight: 400;
+	font-size: 1.5rem;
+	line-height: 2.2rem;
+	margin-bottom: 1.5rem;
+	text-align: center;
+	color: var(--dark);
+}
+
+.asidePagina .imagen-circular {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	border: 1px solid #ccc;
+	margin: 0 auto 1.2rem;
+	padding: 5px;
+}
+
+.asidePagina .imagen-circular img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	border-radius: 500%;
+}
+
+.asidePagina hr {
+	height: 2px;
+	background: var(--color-gris);
+	border: none;
+	margin: 25px auto;
+}
+
+.asidePagina a {
+	background-color: var(--green);
+	color: rgb(245, 245, 245);
+	border-radius: .5rem;
+	font-style: initial;
+	font-size: 1.6rem;
+	font-weight: 400;
+	width: fit-content;
+}
+
+.asidePagina .wp-block-button {
+	width: 100%;
+	display: block;
+	text-align: center;
+}
+
+.asidePagina .aweico a::before {
+	display: inline-block;
+	font-size: 13px;
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	padding-right: 6px;
+}
+
+.asidePagina .call-icon a::before {
+	font-family: "Font Awesome 6 Free";
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	font-weight: 900;
+	content: "\f095";
+}
+
+.asidePagina .chat-icon a::before {
+	font-family: "Font Awesome 6 Free";
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	font-weight: 900;
+	content: "\f075";
+}
+
+.asidePagina .book-icon a::before {
+	font-family: "Font Awesome 6 Free";
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	font-weight: 900;
+	content: "\f1d8";
+}
+
+.asidePagina .book-icon a {
+	/* background: var(--yellow); */
+}
+
+.asidePagina .call-icon a {
+	background-color: var(--blue);
+}
+
+.asidePagina a:hover {
+	background: var(--soft-blue);
+}
+
+/* FIN-SIDEBAR */
+/* FORMULARIO */
+form.wpcf7-form {
+	background: var(--white);
+	padding: 1.5rem;
+	border-radius: 0 0 .5rem .5rem;
+	position: relative;
+}
+
+form.wpcf7-form span+span {
+	display: block;
+	margin-top: .7rem;
+}
+
+.wpcf7 input[type=text],
+.wpcf7 input[type=email],
+.wpcf7 input[type=url],
+.wpcf7 input[type=tel],
+.wpcf7 input[type=number],
+.wpcf7 input[type=submit],
+.wpcf7 .wpcf7-select,
+.wpcf7 textarea {
+	width: 100%;
+	font: 400 1.6rem var(--font-primary);
+	border-radius: .5rem;
+}
+
+.wpcf7 input,
+.wpcf7 textarea {
+	padding: 1.5rem;
+	border: 1px solid var(--gray-4);
+	background-color: var(--white);
+	transition: 0.3s ease background, color;
+	color: var(--black);
+}
+
+.wpcf7 ::placeholder {
+	color: var(--dark);
+}
+
+.wpcf7 :focus {
+	color: var(--gray-7);
+	outline: 0;
+}
+
+.wpcf7 :focus::placeholder {
+	color: var(--white);
+}
+
+.wpcf7 textarea {
+	height: 150px;
+	resize: none;
+}
+
+.wpcf7 input[type="submit"] {
+	background-color: var(--green);
+	color: var(--white);
+	cursor: pointer;
+	font-weight: 600;
+	text-transform: uppercase;
+	border: navajowhite;
+}
+
+.wpcf7 input[type="submit"]:hover {
+	background-color: var(--dark);
+	color: var(--white);
+}
+
+.wpcf7 span.wpcf7-list-item {
+	margin: 0 0 10px 0;
+}
+
+.wpcf7 .wpcf7-validation-errors,
+.wpcf7 .wpcf7-acceptance-missing {
+	border: 5px solid var(--red);
+	margin-top: -30px;
+}
+
+.wpcf7 span.wpcf7-not-valid-tip {
+	color: var(--red);
+	font-size: 12px;
+	padding: 5px;
+}
+
+.wpcf7 .wpcf7-mail-sent-ok {
+	border: 5px solid var(--white);
+	margin-top: -30px;
+}
+
+span.wpcf7-spinner {
+	position: absolute;
+	bottom: 14px;
+	right: 10px;
+	height: 24px !important;
+	margin: 0;
+}
+
+/* --- Formulario de Contactanos --- */
+
+
+.page--content .wpcf7 input {
+	border: 1px solid var(--gray-2);
+	padding: 4px;
+	-moz-border-radius: 6px;
+	-khtml-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+}
+
+.page--content .wpcf7 textarea {
+	padding: 4px;
+	border: 1px solid var(--gray-2);
+	-moz-border-radius: 6px;
+	-khtml-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+}
+
+.page--content .wpcf7 input[type=submit] {
+	border: none;
+	padding: 4px 10px;
+	-moz-border-radius: 6px;
+	-khtml-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	background: var(--dark);
+	color: var(--white);
+	cursor: pointer;
+}
+
+.page--content .wpcf7 span input,
+.page--content .wpcf7 span select,
+.page--content .wpcf7 span textarea {
+	padding-left: 2%;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin-bottom: .4rem;
+	font-family: var(--font-primary), sans-serif;
+	width: 100%;
+	font-weight: 300;
+	font-size: 1.6rem;
+	color: var(--gray-4);
+	box-sizing: border-box;
+	border-radius: 5px;
+	border-color: var(--green);
+}
+
+.page--content form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	background: none;
+	padding: 0;
+}
+
+.page--content form label {
+	flex-basis: 100%;
+}
+
+.page--content form .formT {
+	flex-basis: 100%;
+	text-align: left;
+	font-size: 1.6rem;
+	font-weight: 600;
+	color: var(--gray-4);
+	padding-bottom: .7rem;
+	border-bottom: 1px solid var(--green);
+	text-transform: uppercase;
+	margin: 1rem 0;
+}
+
+.page--content form p>label {
+	width: 48%;
+}
+
+.page--content .wp-block-contact-form-7-contact-form-selector {
+	width: 100%;
+	margin: 3rem auto;
+}
+
+.page--content .wpcf7 input[type="submit"] {
+	font-family: var(--font-primary), sans-serif;
+	font-weight: 600;
+	font-size: 1.6rem;
+	color: #fff;
+	border-radius: 4px;
+	background: var(--green);
+	text-transform: uppercase;
+	text-align: center;
+	width: 100%;
+	transition: .2s ease-in-out;
+	padding: 16px 18px;
+}
+
+.page--content .wpcf7 input[type="submit"]:hover {
+	background: var(--blue);
+	background-size: 200% 200%;
+	animation: rainbow 2s ease-in-out infinite;
+}
+
+.page--content form span {
+	font-size: 1.6rem;
+	font-weight: 400;
+	padding-bottom: .5rem;
+	color: var(--gray-4);
+	display: block;
+}
+
+/* FIN-FORMULARIO */
+/* TARJETAS */
+.tours__category {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 3rem;
+	margin-top: 0;
+}
+
+.besttours__card {
+	flex: 0 1 100%;
+	height: 47rem;
+	border-radius: 0.5rem;
+	position: relative;
+	cursor: pointer;
+}
+
+.card-image {
+	width: 100%;
+	height: 100%;
+}
+
+.card-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 0.5rem;
+}
+
+.card-text {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	bottom: 0;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: end;
+	opacity: 1;
+	transition: opacity 0.4s ease-in;
+}
+
+.card-text h2 {
+	font-weight: 400;
+	font-size: 1.6rem;
+	line-height: 2.4rem;
+	color: var(--white);
+	text-align: center;
+	padding: 1.2rem;
+}
+
+.card-textbox {
+	background: rgba(0, 0, 0, 0.53);
+	backdrop-filter: blur(2px);
+	border-radius: 0.5rem;
+	width: 100%;
+	height: fit-content;
+}
+
+.card-textbox .secondary_title {
+	display: inline-block;
+}
+
+.card-after {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	padding: 1.5rem;
+	top: 0px;
+	background: rgba(0, 0, 0, 0.53);
+	backdrop-filter: blur(2px);
+	border-radius: 0.5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	opacity: 0;
+	transition: opacity 0.3s ease-out;
+}
+
+.card-after h2 {
+	font-weight: 600;
+	font-size: 2rem;
+	line-height: 2.4rem;
+	text-align: center;
+	color: var(--white);
+	margin-bottom: .5rem;
+}
+
+.card-duration {
+	position: relative;
+	display: block;
+	padding-bottom: 2.2rem;
+}
+
+.card-after h2 span {
+	display: none;
+}
+
+
+.card-after .card-duration:before {
+	position: absolute;
+	content: "";
+	width: 7rem;
+	height: 0.2rem;
+	background: var(--white);
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+.card-after p,
+.card-after span {
+	color: var(--white);
+	font-weight: 300;
+	text-align: center;
+}
+
+p.card-duration {
+	font-weight: 500;
+}
+
+.card-after .button-book {
+	display: block;
+	border: 2px solid var(--yellow);
+	color: var(--yellow);
+	font: 500 1.6rem var(--font-primary);
+	text-transform: uppercase;
+	text-decoration: none;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 2.5rem;
+	margin: auto;
+	padding: 1.1rem 1.8rem 1rem;
+	border-radius: 0.5rem;
+	width: fit-content;
+}
+
+.besttours__card:hover .card-after,
+.besttours__card:active .card-after {
+	opacity: 1;
+	transition: opacity 0.5s 0.1s ease-in;
+}
+
+.besttours__card:hover .card-text,
+.besttours__card:active .card-text {
+	opacity: 0;
+	transition: opacity 0.5s 0.1s ease-out;
+}
+
+/* FIN-TARJETAS */
+/* NAVEGACION */
+.navigation {
+	display: flex;
+	justify-content: space-between;
+}
+
+/* Estilo para los enlaces de páginas anteriores */
+.previous-posts-link a {
+	color: #000;
+	text-decoration: none;
+	background-color: #f5f5f5;
+	padding: 5px 10px;
+	border-radius: 3px;
+}
+
+.previous-posts-link a:hover {
+	background-color: #eaeaea;
+}
+
+/* Estilo para los enlaces de páginas siguientes */
+.next-posts-link a {
+	color: #000;
+	text-decoration: none;
+	background-color: #f5f5f5;
+	padding: 5px 10px;
+	border-radius: 3px;
+}
+
+.next-posts-link a:hover {
+	background-color: #eaeaea;
+}
+
+/* FIN-NAVEGACION */
+/* BOTON-RESERVAR */
+.itinerary__wetravel a {
+	background-color: var(--green);
+	border-radius: .5rem;
+	padding: 1.8rem 2.5rem 1.3rem;
+	text-decoration: none;
+	color: var(--white);
+	font: 500 2rem/2.2rem var(--font-secondary);
+	text-transform: uppercase;
+}
+
+.itinerary__wetravel {
+	display: flex;
+	justify-content: center;
+	padding: 1.5rem 0;
+	margin-bottom: 2rem;
+	border-top: .2rem solid var(--gray-1);
+	border-bottom: .2rem solid var(--gray-1);
+	transition: all .5s;
+}
+
+.itinerary__wetravel a:hover {
+	background-image: linear-gradient(to right, var(--blue), var(--soft-blue), var(--blue));
+	animation: slidebg 5s linear infinite;
+	transition: all .5s;
+}
+
+@keyframes slidebg {
+	to {
+		background-position: 20vw;
+	}
+}
+
+/* FIN-BOTON-RESERVAR */
