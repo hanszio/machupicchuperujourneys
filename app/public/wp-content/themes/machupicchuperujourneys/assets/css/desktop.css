@@ -379,3 +379,6 @@ p.card-excerpt {
     line-height: 2rem;
 }
 /* FIN-PAGINAS */
+.header__menu nav#menu ul>li.lang-item {
+    display: none;
+}
